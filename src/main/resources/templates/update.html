@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .update-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .update-container h2 {
+            text-align: center;
+            font-weight:bold;
+            font-size: 35px;
+        }
+        .update-container input[type="text"],
+        .update-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .update-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .update-container button:hover {
+            background-color: #45a049;
+        }
+        .forgot-password {
+            text-align: center;
+        }
+        a {
+            size:auto;
+            display:block;
+            text-align:center;
+        }
+        button {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-container">
+        <form action="/member/update" method="post">
+            <input type="hidden" th:value="${updateMember.id}" name="id"><br>
+            이메일: <input type="text" th:value="${updateMember.memberEmail}" name="memberEmail" readonly> <br>
+            비밀번호: <input type="text" th:value="${updateMember.memberPassword}" name="memberPassword"> <br>
+            이름: <input type="text" th:value="${updateMember.memberName}" name="memberName"> <br>
+            <button type="submit">정보수정</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .login-container h2 {
+            text-align: center;
+            font-weight:bold;
+            font-size: 35px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+        .forgot-password {
+            text-align: center;
+        }
+        a {
+            size:auto;
+            display:block;
+            text-align:center;
+        }
+        button {
+            font-size: 15px;
+        }
+        </style>
+</head>
+<body>
+<div class="login-container">
+    <form action="/member/login" method="post">
+        이메일: <input type="text" name="memberEmail"> <br>
+        비밀번호: <input type="password" name="memberPassword"> <br>
+        <input type="submit" value="로그인">
+    </form>
+</div>
+</body>
+</html>
